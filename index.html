@@ -78,6 +78,7 @@
             font-size: 15px;
             outline: none;
             cursor: pointer;
+            box-shadow: 0 2px 2px -1px rgba(0, 0, 0, .3);
         }
 
         .native-button:hover {
@@ -88,6 +89,16 @@
             border: 1px dashed #eee;
             margin-bottom: 10px;
             margin-top: 10px;
+        }
+
+        input[type="radio"] {
+            margin-top: -1px;
+            vertical-align: middle;
+        }
+
+        .radio-button {
+            padding: 4px;
+            border-radius: 4px;
         }
 
         @media(max-width:800px) {
@@ -105,14 +116,14 @@
             }
         }
     </style>
+    <script src="./index.js"></script>
 </head>
 
 <body>
     <section class="panes">
-
         <section class="pane left">
             <div class="left-title">
-                Create a new account and start a listen to the best sound
+                Create a new account and start listening to the best sound.
             </div>
         </section>
 
@@ -147,22 +158,25 @@
                         </div>
                     </div>
                 </div>
-                <div class="native">
-                    <label>Please select your gender:</label>
+                <div>
+                    <div style="font-weight: 600;margin-bottom: 6px;">Please select your gender</div>
+                    <div></div>
+
                     <input type="radio" id="male" name="gender" value="male">
-                    <label for="male">Male</label><br>
+                    <label for="male">Male</label>
+
                     <input type="radio" id="female" name="gender" value="female">
-                    <label for="female">Female</label><br>
+                    <label for="female">Female</label>
                     <input type="radio" id="other" name="gender" value="other">
                     <label for="other">Rather not say</label>
                 </div>
 
                 <div class="devider"></div>
 
-                <div class="native">
-                    <div class="wrapper">
-                        <label for="male">You can contact me via email</label>
-                        <input type="checkbox" name="contact_me" />
+                <div>
+                    <div style="margin-bottom: 12px;">
+                        <label>You can contact me via email</label>
+                        <input type="checkbox" checked='checked' name="contact_me" />
                     </div>
                 </div>
 
