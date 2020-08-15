@@ -1,4 +1,5 @@
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         body {
             font-family: arial, sans-serif;
@@ -101,6 +102,14 @@
             border-radius: 4px;
         }
 
+        #toast {
+            padding: 6px;
+            border-radius: 10px;
+            margin: 12px;
+            color: #fff;
+
+        }
+
         @media(max-width:800px) {
             .panes {
                 display: block;
@@ -116,7 +125,6 @@
             }
         }
     </style>
-    <script src="./index.js"></script>
 </head>
 
 <body>
@@ -129,36 +137,36 @@
 
 
         <section class="pane right">
-            <form>
+            <form method="POST" id="mainForm">
                 <div>
                     <div class="main-title">Sign Up</div>
                     <div class="devider"></div>
                     <div class="native">
                         <label for="male">First Name</label>
-                        <div class="wrapper">
+                        <div class="wrapper" id="first_name">
                             <input name='first_name' placeholder="First Name" />
                         </div>
                     </div>
-                    <div class="native">
+                    <div class="native last_name">
                         <label for="male">Last Name</label>
-                        <div class="wrapper">
-                            <input name='first_name' placeholder="Last Name" />
+                        <div class="wrapper" id="last_name">
+                            <input name='last_name' placeholder="Last Name" />
                         </div>
                     </div>
-                    <div class="native">
+                    <div class="native contact_number">
                         <label for="male">Contact Number</label>
-                        <div class="wrapper">
+                        <div class="wrapper" id="contact_number">
                             <input name='contact_number' placeholder="Contact Number" />
                         </div>
                     </div>
                     <div class="native">
                         <label for="male">Email</label>
-                        <div class="wrapper">
+                        <div class="wrapper" id="email">
                             <input name='email' placeholder="Email" />
                         </div>
                     </div>
                 </div>
-                <div>
+                <div id="gender">
                     <div style="font-weight: 600;margin-bottom: 6px;">Please select your gender</div>
                     <div></div>
 
@@ -174,14 +182,17 @@
                 <div class="devider"></div>
 
                 <div>
-                    <div style="margin-bottom: 12px;">
+                    <div style="margin-bottom: 12px;" id="contact_me">
                         <label>You can contact me via email</label>
                         <input type="checkbox" checked='checked' name="contact_me" />
                     </div>
                 </div>
 
+                <div id="toast"></div>
+
                 <button class="native-button">Submit</button>
             </form>
         </section>
     </section>
+    <script src="./index.js"></script>
 </body>
